@@ -12,7 +12,7 @@ Demo website: vowageboat.study
 7. Profile 
 
 ### Contributers 
-devtahmid
+[Shaikh Tahmidur Rahman(devtahmid)](https://github.com/devtahmid)
 AdarshChandran2000
 Ashraf123-cloud
 Alawi (no github)
