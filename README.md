@@ -17,3 +17,15 @@ AdarshChandran2000
 Ashraf123-cloud
 Alawi (no github)
 Reema (no github)
+
+
+###future work 
+index.php as footer <br>
+stars in notifications , profile <br>
+history <br>
+ajax in messages , start by scrolling to bottom of page <br>
+bugs in profile.php <br>
+republish auction bugs <br>
+validate browse, and all other forms <br>
+ratings.php ? not sure if this was completed<br>
+header bug (search button below bar)
