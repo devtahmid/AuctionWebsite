@@ -9,40 +9,25 @@ if (!isset($_SESSION['userId']))
 AUCTIONS.COM
 </title>
 <style>
-h1 {text-align: center;}
-h2 {text-align: center;}
-          body {
-  background-image: url('https://alicewalkersgarden.com/wp-content/uploads/Broadway-Grass2.jpg');
+h1 {
+  text-align: center;
+  font-size:3vw;
+}
+body {
+  background-image: url("images/wallpaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
 }
 </style>
 </head>
 
 <body>
-<br><br><br><br><br>
-<h1> Hii!</h1>
-
+<div style="margin:20%; color:#f4a100">
+<h1 style=""> Hii!</h1>
 <h1> WELCOME TO AUCTIONS.COM </h1>
-
-
-<h1> BY: SHAIKH TAHMIDUR RAHMAN</h1>
-<h1>  ADARSH SHINJU CHANDRAN</h1>
-<h1>  ASHRAF HARIS</h1>
-<h1>  ALAWI HASIB</h1>
-<h1>  REEMA SHAIKH</h1>
-
-<h3>remove after completion of projet</h3>
- todo<br>
-index.php as footer <br>
-stars in notifications , profile <br>
-history <br>
-ajax in messages , start by scrolling to bottom of page <br>
-bugs in profile.php <br>
-republish auction bugs <br>
-validate browse, and all other forms <br>
-ratings.php ? not sure if this was completed<br>
-header bug (search button below bar)
-
-
+</div>
 <style>
 </style>
 

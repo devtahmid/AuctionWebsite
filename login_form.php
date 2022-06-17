@@ -22,6 +22,43 @@
   .login {
     font-size: 50px;
   }
+
+
+
+
+
+
+  .popup {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 280px;
+    left: 50%;
+    margin-left: -150px;
+    height: 180px;
+    top: 50%;
+    margin-top: -100px;
+    background: #ebdbbc;
+    z-index: 20;
+  }
+
+  #popup1 {
+    -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+    box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  }
+
+
+  /* From here on, just aesthetics */
+
+  .popup a,
+  .popup a:visited {
+    color: #1abc9c;
+  }
+
+  p {
+  	margin: 1em 0;
+  }
+
   </style>
 </head>
 
@@ -48,12 +85,26 @@
     <input class='form-control' placeholder='6 to 20 characters' type='password' name='password' onkeyup="checkPWD(this.value,'login_pwd_msg')" size='20' required><span id='login_pwd_msg'></span><br>
 
     <input type='hidden' name='JSEnabled' value='false'>
-    <input class='btn btn-lg btn-primary submit' type='submit' name='login_user' value='Login'>
 
+    <input class='btn btn-lg btn-primary submit' type='submit' name='login_user' value='Login'>
+    <button class='btn btn-lg btn-success submit' onclick="show('popup1')">Use Sample Accounts</button>
   </form>
+
 </br>
     <p>Dont have an account? <b><a href="registration_form.php">Sign up here!</a></b> </p>
  </div>
+
+<!-- pop up for login details, css(on same page) starts from popup class-->
+<div class="popup" id="popup1">
+  <u>Auction owner and winner</u>
+  <b>username:</b>alawi&nbsp&nbsp <b>pass:</b>Project1
+	<u>Active Auction bidder</u>
+  <b>username:</b>shanib&nbsp&nbsp <b>pass:</b>Project8<br>
+  <a href="#" onclick="hide('popup1')">Ok!</a>
+</div>
+
+
+
 <?php
 
 $error=null;
@@ -73,4 +124,16 @@ elseif ($error==4) {
 
 ?>
 </body>
+<script>
+$ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+	$(id).style.display ='block';
+}
+var hide = function(id) {
+	$(id).style.display ='none';
+}
+</script>
 </html>
