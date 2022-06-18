@@ -36,13 +36,13 @@ Demo website: http://auctionit.epizy.com
 [Adarsh Shinju Chandran (adarshsc2000)](https://github.com/adarshsc2000)<br>
 [Ashraf Harris (Ashraf123-cloud)](https://github.com/Ashraf123-cloud)<br>
 
-### future work 
-1. Add responsiveness to the whole website <br>
-2. Add Auction history to user profiles<br>
-3. Ratings.php for sellers and buyers<br>
-4. validate browse, and all other forms <br>
-5. Stars in notifications need to be reversed horizontally <br>
-6. Ajax in messages , start by scrolling to bottom of page <br>
-7. Republish auction bugs <br>
+### Future work 
+- [ ] Add responsiveness to the whole website <br>
+- [ ] Add Auction history to user profiles<br>
+- [ ] Ratings.php for sellers and buyers<br>
+- [ ] validate browse, and all other forms <br>
+- [ ] Stars in notifications need to be reversed horizontally <br>
+- [ ] Ajax in messages , start by scrolling to bottom of page <br>
+- [ ] Republish auction bugs <br>
 
 
