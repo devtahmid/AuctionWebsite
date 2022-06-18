@@ -39,6 +39,8 @@
     top: 50%;
     margin-top: -100px;
     background: #ebdbbc;
+    border: 5px solid #ffc107;
+    border-radius: 15px;
     z-index: 20;
   }
 
@@ -99,11 +101,15 @@
   <u>Auction owner and winner</u><br>
   <b>username:</b>alawi&nbsp&nbsp <b>pass:</b>Project1<br>
 	<u>Active Auction bidder</u><br>
-  <b>username:</b>shanib&nbsp&nbsp <b>pass:</b>Project8<br>
+  <b>username:</b>shanib&nbsp&nbsp <b>pass:</b>Project8<br><br>
   <a href="#" onclick="hide('popup1')">Ok!</a>
 </div>
 
-
+<script>
+if (screen.availWidth<1080) {
+  alert("Please use a bigger screen as the website is not fully responsive yet. Thank you");
+}
+</script>
 
 <?php
 
