@@ -89,7 +89,7 @@
     <input type='hidden' name='JSEnabled' value='false'>
 
     <input class='btn btn-lg btn-primary submit' type='submit' name='login_user' value='Login'>
-    <button class='btn btn-lg btn-success submit' onclick="show('popup1')">Use Sample Accounts</button>
+    <button class='btn btn-lg btn-success submit' type='button' onclick="show('popup1')">Use Sample Accounts</button>
   </form>
 
 </br>
