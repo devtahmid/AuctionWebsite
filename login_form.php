@@ -96,9 +96,9 @@
 
 <!-- pop up for login details, css(on same page) starts from popup class-->
 <div class="popup" id="popup1">
-  <u>Auction owner and winner</u>
-  <b>username:</b>alawi&nbsp&nbsp <b>pass:</b>Project1
-	<u>Active Auction bidder</u>
+  <u>Auction owner and winner</u><br>
+  <b>username:</b>alawi&nbsp&nbsp <b>pass:</b>Project1<br>
+	<u>Active Auction bidder</u><br>
   <b>username:</b>shanib&nbsp&nbsp <b>pass:</b>Project8<br>
   <a href="#" onclick="hide('popup1')">Ok!</a>
 </div>
