@@ -1,6 +1,6 @@
 # AuctionWebsite
-An auction website created as part of a school project. It was tested on Apache server and utilises MySql database. 
-Demo website: vowageboat.study
+A php auction website created as part of a course project. It was tested on Apache server and utilises MariaDB. <br>
+Demo website: http://auctionit.epizy.com
 
 ### Website functionalites:  
 1. login/sign up
