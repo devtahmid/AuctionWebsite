@@ -34,7 +34,7 @@ Demo website: http://auctionit.epizy.com
 ### Contributors 
 [Shaikh Tahmidur Rahman (devtahmid)](https://github.com/devtahmid)<br>
 [Adarsh Shinju Chandran (adarshsc2000)](https://github.com/adarshsc2000)<br>
-Ashraf123-cloud
+[Ashraf Harris (Ashraf123-cloud)](https://github.com/Ashraf123-cloud)<br>
 
 ### future work 
 1. Add responsiveness to the whole website <br>
