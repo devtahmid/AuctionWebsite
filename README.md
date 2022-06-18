@@ -25,15 +25,15 @@ Demo website: vowageboat.study
 ![View page](/readmeAssets/bid.png)
 
 - Check auction related notifications
-![Notifications page](/readmeAssets/notifications.png)
+![Notifications page](/readmeAssets/notificatios.png)
 
 - Check Messages from buyer or auction winner
 ![Messages page](/readmeAssets/messages.png)
 
 
 ### Contributers 
-[Shaikh Tahmidur Rahman(devtahmid)] (https://github.com/devtahmid)<br>
-[Adarsh Shinju Chandran(adarshsc2000)] (https://github.com/adarshsc2000)<br>
+[Shaikh Tahmidur Rahman (devtahmid)](https://github.com/devtahmid)<br>
+[Adarsh Shinju Chandran (adarshsc2000)](https://github.com/adarshsc2000)<br>
 Ashraf123-cloud
 
 ### future work 
