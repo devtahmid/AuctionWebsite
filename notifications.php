@@ -167,7 +167,7 @@ try
 
             elseif ($sid==$row['WINNER_ID'])
             { //if user is winner
-                $sql2="SELECT * FROM addresses WHERE USER_ID=".$sid;
+                $sql2="SELECT * FROM addresses WHERE USER_ID='".$sid."'";
                 $addrStmnt=$db->query($sql2);
                 $addrResult=$addrStmnt->fetchAll();
                 echo "<table class='table table-dark'>";
@@ -178,8 +178,9 @@ try
                         echo "<select class='form-control' name='winnerAddr' required>";
                           foreach ($addrResult as $addr)
                           {
+                            //var_dump($addrResult);
                               if (strlen($addr['ADDRESS'])>0)
-                                  echo "<option value='".$addr['ADDRESS']."'>".$addr['ADDRESS']."</option>";
+                                  echo "<option value='".$addr['AUCTION_ID']."'>".$addr['ADDRESS']."</option>";
                           }
                           ?>
                         </select>
