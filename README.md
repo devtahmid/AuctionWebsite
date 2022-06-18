@@ -38,9 +38,11 @@ Ashraf123-cloud
 
 ### future work 
 Add responsiveness to the whole website <br>
-stars in notifications need to be reversed horizontally <br>
-history <br>
-ajax in messages , start by scrolling to bottom of page <br>
-republish auction bugs <br>
+Add Auction history to user profiles<br>
+Ratings.php for sellers and buyers<br>
 validate browse, and all other forms <br>
-ratings.php ? not sure if this was completed<br>
+Stars in notifications need to be reversed horizontally <br>
+Ajax in messages , start by scrolling to bottom of page <br>
+Republish auction bugs <br>
+
+
