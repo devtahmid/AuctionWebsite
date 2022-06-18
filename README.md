@@ -18,8 +18,8 @@ Demo website: vowageboat.study
 - Browse Auctions
 ![browse auctions page](/readmeAssets/browse.png)
 
-- Browse Auctions
-![Create auction page](/readmeAssets/browse.png)
+- Auction an item
+![Create auction page](/readmeAssets/create.png)
 
 - View and bid on auctions
 ![View page](/readmeAssets/bid.png)
