@@ -31,7 +31,7 @@ Demo website: http://auctionit.epizy.com
 ![Messages page](/readmeAssets/messages.png)
 
 
-### Contributers 
+### Contributors 
 [Shaikh Tahmidur Rahman (devtahmid)](https://github.com/devtahmid)<br>
 [Adarsh Shinju Chandran (adarshsc2000)](https://github.com/adarshsc2000)<br>
 Ashraf123-cloud
