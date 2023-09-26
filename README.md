@@ -4,7 +4,7 @@
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)  
 An auction webapp created as part of a course project. It was tested on Apache server and utilises MariaDB. <br>
-<b>Demo website:</b> http://auctionit.epizy.com
+<b>Demo website:</b> [http://auctionit.infinityfreeapp.com](http://auctionit.infinityfreeapp.com/login_form.php) 
 
 ### Website functionalites:  
 1. login/sign up
