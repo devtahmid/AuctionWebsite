@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1deb3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 18, 2022 at 09:49 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Host: localhost:3306
+-- Generation Time: Aug 14, 2024 at 07:16 PM
+-- Server version: 8.0.39-0ubuntu0.24.04.1
+-- PHP Version: 8.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `epiz_27510450_itcs333project_group4`
+-- Database: `itcs333project_group4`
 --
 
 -- --------------------------------------------------------
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `addresses` (
-  `ADDRESS_ID` int(11) NOT NULL,
-  `USER_ID` int(11) NOT NULL,
+  `ADDRESS_ID` int NOT NULL,
+  `USER_ID` int NOT NULL,
   `ADDRESS` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `addresses`
@@ -104,51 +104,51 @@ INSERT INTO `addresses` (`ADDRESS_ID`, `USER_ID`, `ADDRESS`) VALUES
 --
 
 CREATE TABLE `auctions` (
-  `AUCTION_ID` int(11) NOT NULL,
-  `OWNER_ID` int(11) NOT NULL,
+  `AUCTION_ID` int NOT NULL,
+  `OWNER_ID` int NOT NULL,
   `AUCTION_NAME` varchar(50) NOT NULL,
   `DESCRIPTION` varchar(150) NOT NULL,
   `START_TIME_DATE` datetime NOT NULL,
   `END_TIME_DATE` datetime NOT NULL,
   `START_PRICE` decimal(10,3) NOT NULL,
   `HIGHEST_BID` decimal(10,3) DEFAULT NULL,
-  `WINNER_ID` int(11) DEFAULT NULL,
+  `WINNER_ID` int DEFAULT NULL,
   `WINNER_ADDR` varchar(30) NOT NULL,
   `STATUS` varchar(10) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `auctions`
 --
 
 INSERT INTO `auctions` (`AUCTION_ID`, `OWNER_ID`, `AUCTION_NAME`, `DESCRIPTION`, `START_TIME_DATE`, `END_TIME_DATE`, `START_PRICE`, `HIGHEST_BID`, `WINNER_ID`, `WINNER_ADDR`, `STATUS`) VALUES
-(1, 2, 'Henry Koehler (American, 1927 - 2018) \"Blue and Pi', 'Henry Koehler (American, 1927 - 2018)\"Blue and Pink Jockey, Below, 1973\"oil on canvassigned, dated and titled Henry Koehler lower right verso24\" x 20\"', '2020-12-20 20:19:00', '2021-01-01 20:20:00', '8.000', '10.000', 8, '', 'pending'),
-(2, 1, 'Early 20th C. Thai Iron Dha Sword w/ Painted Sheat', '100% of the Buyer\'s Premium of all lots sold in this auction will be donated to Community Food Share by Artemis Gallery. $1.00 = 3 meals!\r\n\r\n**First T', '2020-12-20 20:27:00', '2021-01-20 20:27:00', '100.000', '275.000', 19, '', 'pending'),
-(3, 1, '1909-S LINCOLN CENT', 'PCGS XF-40 KEY COIN! ESTIMATE: $200-$300', '2020-12-20 20:31:00', '2021-01-04 20:32:00', '122.999', '230.000', 14, '', 'pending'),
-(4, 3, 'Laurel Lamp Manufacturing Mushroom Table Lamp', 'Metal fluted base, felted bottom detached. Untested, measures 17x12 inches.', '2020-12-20 20:37:00', '2021-01-05 20:37:00', '64.998', '75.000', 8, '', 'pending'),
-(5, 4, 'Linden German Mantel clock', 'Made by Cuckoo Clock May in West Germany unadjusted. Stamped 1050-020, measures 8.25x12x5.25 inches.', '2020-12-20 20:42:00', '2021-01-06 08:42:00', '84.999', '200.000', 12, '', 'pending'),
-(6, 5, 'Navajo vintage silver & bear claw necklace w/ turq', 'A rare Navajo vintage silver and bear claw necklace with turquoise, total 12 claws, wt. 306gm', '2020-12-20 08:45:00', '2020-12-20 20:51:00', '999.999', '1000.000', 1, '', 'pending'),
-(7, 6, 'Hermes Birkin 30 Veau Togo Geranium Red Vermillon', 'Product details: Gold-plated hardware. Dual rolled top handles. Protective feet at base. Gold foil-stamped logo at flap underside. Leather lining. Dua', '2020-12-20 20:57:00', '2020-12-20 20:59:00', '56.000', '70.000', 7, '', 'pending'),
-(8, 5, 'ICONIC VINTAGE ALEXANDER MCQUEEN MINK FUR Coat 40', 'ALEXANDER MCQUEEN MINK FUR COAT Relaxed fit Two pockets Knee length Content: 100% mink fur IT 40 - US 4/6 shoulder to shoulder 18\" armpit to armpit 18', '2020-12-20 09:02:00', '2020-12-31 21:03:00', '20.000', '40.000', 12, '', 'pending'),
-(9, 2, 'Rolex Mens 18K Yellow Gold Black Diamond Quickset', 'One Mens Quickset Rolex Day Date 18K Yellow Gold President Polished, Serviced & Electronically Tested, 18K Yellow Gold Case: 36mm, 18K Yellow Gold Cro', '2020-12-20 09:07:00', '2020-12-30 21:08:00', '999.999', '1001.000', 9, '', 'pending'),
-(10, 1, 'Generous Lot of Seiko Watches.', 'lot includes Seiko automatic 33 jewels (6106-5480)…SEIKO BELL MATIC 17 JEWELS (4006-6027 ) Seiko Sports 100 ( H556-5029) …Seiko Automatic 19 Jewels ( ', '2020-12-20 09:12:00', '2020-12-29 09:12:00', '1999.900', '2006.000', 11, '', 'pending'),
-(11, 3, 'Gustav Stickley Hall Seat Model No. 182', 'Gustav Stickley (American, 1858-1952) Hall Seat, model number 182, circa 1901-1903, oak bench / settee with lift top seat opening to reveal storage, m', '2020-12-20 09:15:00', '2020-12-20 21:24:00', '78.899', '90.000', 4, '', 'pending'),
-(12, 11, 'Cat ', 'Her name is mia .she\'s so adorable ', '2020-12-23 20:30:00', '2020-12-24 15:15:00', '50.000', '57.000', 1, '', 'pending'),
-(13, 19, 'shoe', 'Black', '2020-12-31 23:17:00', '2020-12-31 23:17:00', '25.000', NULL, NULL, '', 'pending'),
-(14, 21, 'test auction', 'test', '2021-01-23 11:52:00', '2021-01-23 23:52:00', '100.000', '200.000', 1, '', 'pending'),
-(15, 1, 'alawi\'s product', 'ala', '2021-01-23 16:54:00', '2021-01-23 16:55:00', '12.000', NULL, NULL, '', 'failed'),
-(16, 1, 'alawi', 'ala', '2021-01-23 17:02:00', '2021-01-23 17:04:00', '300.000', '325.000', 21, '', 'pending'),
-(17, 21, 'image showinng or not', 'image showinng or not', '2021-01-23 17:04:00', '2021-01-23 18:04:00', '100.000', NULL, NULL, '', 'pending'),
-(18, 21, 'check img 2', 'img 2', '2021-01-23 17:05:00', '2021-01-23 17:09:00', '12.000', '122.000', 1, '', 'pending'),
-(19, 21, 'gif', 'gif', '2021-01-23 17:06:00', '2021-01-23 17:06:00', '25.000', NULL, NULL, '', 'pending'),
-(20, 1, 'linus tech tips', 'youtube channel', '2021-07-11 23:35:00', '2021-07-14 11:35:00', '23.000', NULL, NULL, '', 'pending'),
-(21, 1, 'watermelon', 'watermelon', '2021-07-11 23:37:00', '2021-07-22 23:23:00', '12.000', NULL, NULL, '', 'pending'),
-(22, 21, 'Handbag', 'red Ladies Handbag', '2022-02-17 16:46:00', '2030-01-17 17:46:00', '5.000', NULL, NULL, '', NULL),
-(23, 21, 'iphone X', 'iphone X, brand new condition. includes charger and box', '2022-02-17 16:48:00', '2022-02-17 16:48:00', '150.000', NULL, NULL, '', 'failed'),
-(24, 21, 'Bed side lamp', 'Bed side Lamp', '2022-02-17 16:50:00', '2022-02-17 16:50:00', '10.000', NULL, NULL, '', 'pending'),
-(25, 21, 'Casio Silver watch', 'Casio silver watch, analog watch', '2022-02-19 16:52:00', '2022-02-17 16:52:00', '20.000', NULL, NULL, '', 'pending'),
-(26, 21, 'iphone X', 'iphone X, brand new condition. includes charger and box', '2022-02-17 16:53:00', '2031-10-17 16:53:00', '150.000', NULL, NULL, '', NULL),
-(28, 1, 'Sofa', '2 seater, wooden sofa. Cushions on sofa in image included', '2022-02-17 17:42:00', '2023-12-17 22:00:00', '30.000', '35.000', 8, '', NULL);
+(1, 2, 'Henry Koehler (American, 1927 - 2018) \"Blue and Pi', 'Henry Koehler (American, 1927 - 2018)\"Blue and Pink Jockey, Below, 1973\"oil on canvassigned, dated and titled Henry Koehler lower right verso24\" x 20\"', '2020-12-20 20:19:00', '2021-01-01 20:20:00', 8.000, 10.000, 8, '', 'pending'),
+(2, 1, 'Early 20th C. Thai Iron Dha Sword w/ Painted Sheat', '100% of the Buyer\'s Premium of all lots sold in this auction will be donated to Community Food Share by Artemis Gallery. $1.00 = 3 meals!\r\n\r\n**First T', '2020-12-20 20:27:00', '2021-01-20 20:27:00', 100.000, 275.000, 19, '', 'pending'),
+(3, 1, '1909-S LINCOLN CENT', 'PCGS XF-40 KEY COIN! ESTIMATE: $200-$300', '2020-12-20 20:31:00', '2021-01-04 20:32:00', 122.999, 230.000, 14, '', 'pending'),
+(4, 3, 'Laurel Lamp Manufacturing Mushroom Table Lamp', 'Metal fluted base, felted bottom detached. Untested, measures 17x12 inches.', '2020-12-20 20:37:00', '2021-01-05 20:37:00', 64.998, 75.000, 8, '', 'pending'),
+(5, 4, 'Linden German Mantel clock', 'Made by Cuckoo Clock May in West Germany unadjusted. Stamped 1050-020, measures 8.25x12x5.25 inches.', '2020-12-20 20:42:00', '2021-01-06 08:42:00', 84.999, 200.000, 12, '', 'pending'),
+(6, 5, 'Navajo vintage silver & bear claw necklace w/ turq', 'A rare Navajo vintage silver and bear claw necklace with turquoise, total 12 claws, wt. 306gm', '2020-12-20 08:45:00', '2020-12-20 20:51:00', 999.999, 1000.000, 1, '', 'pending'),
+(7, 6, 'Hermes Birkin 30 Veau Togo Geranium Red Vermillon', 'Product details: Gold-plated hardware. Dual rolled top handles. Protective feet at base. Gold foil-stamped logo at flap underside. Leather lining. Dua', '2020-12-20 20:57:00', '2020-12-20 20:59:00', 56.000, 70.000, 7, '', 'pending'),
+(8, 5, 'ICONIC VINTAGE ALEXANDER MCQUEEN MINK FUR Coat 40', 'ALEXANDER MCQUEEN MINK FUR COAT Relaxed fit Two pockets Knee length Content: 100% mink fur IT 40 - US 4/6 shoulder to shoulder 18\" armpit to armpit 18', '2020-12-20 09:02:00', '2020-12-31 21:03:00', 20.000, 40.000, 12, '', 'pending'),
+(9, 2, 'Rolex Mens 18K Yellow Gold Black Diamond Quickset', 'One Mens Quickset Rolex Day Date 18K Yellow Gold President Polished, Serviced & Electronically Tested, 18K Yellow Gold Case: 36mm, 18K Yellow Gold Cro', '2020-12-20 09:07:00', '2020-12-30 21:08:00', 999.999, 1001.000, 9, '', 'pending'),
+(10, 1, 'Generous Lot of Seiko Watches.', 'lot includes Seiko automatic 33 jewels (6106-5480)…SEIKO BELL MATIC 17 JEWELS (4006-6027 ) Seiko Sports 100 ( H556-5029) …Seiko Automatic 19 Jewels ( ', '2020-12-20 09:12:00', '2020-12-29 09:12:00', 1999.900, 2006.000, 11, '', 'pending'),
+(11, 3, 'Gustav Stickley Hall Seat Model No. 182', 'Gustav Stickley (American, 1858-1952) Hall Seat, model number 182, circa 1901-1903, oak bench / settee with lift top seat opening to reveal storage, m', '2020-12-20 09:15:00', '2020-12-20 21:24:00', 78.899, 90.000, 4, '', 'pending'),
+(12, 11, 'Cat ', 'Her name is mia .she\'s so adorable ', '2020-12-23 20:30:00', '2020-12-24 15:15:00', 50.000, 57.000, 1, '', 'pending'),
+(13, 19, 'shoe', 'Black', '2020-12-31 23:17:00', '2020-12-31 23:17:00', 25.000, NULL, NULL, '', 'pending'),
+(14, 21, 'test auction', 'test', '2021-01-23 11:52:00', '2021-01-23 23:52:00', 100.000, 200.000, 1, '', 'pending'),
+(15, 1, 'alawi\'s product', 'ala', '2021-01-23 16:54:00', '2021-01-23 16:55:00', 12.000, NULL, NULL, '', 'failed'),
+(16, 1, 'alawi', 'ala', '2021-01-23 17:02:00', '2021-01-23 17:04:00', 300.000, 325.000, 21, '', 'pending'),
+(17, 21, 'image showinng or not', 'image showinng or not', '2021-01-23 17:04:00', '2021-01-23 18:04:00', 100.000, NULL, NULL, '', 'pending'),
+(18, 21, 'check img 2', 'img 2', '2021-01-23 17:05:00', '2021-01-23 17:09:00', 12.000, 122.000, 1, '', 'pending'),
+(19, 21, 'gif', 'gif', '2021-01-23 17:06:00', '2021-01-23 17:06:00', 25.000, NULL, NULL, '', 'pending'),
+(20, 1, 'linus tech tips', 'youtube channel', '2021-07-11 23:35:00', '2021-07-14 11:35:00', 23.000, NULL, NULL, '', 'pending'),
+(21, 1, 'watermelon', 'watermelon', '2021-07-11 23:37:00', '2021-07-22 23:23:00', 12.000, NULL, NULL, '', 'pending'),
+(22, 21, 'Handbag', 'red Ladies Handbag', '2022-02-17 16:46:00', '2030-01-17 17:46:00', 5.000, NULL, NULL, '', NULL),
+(23, 21, 'iphone X', 'iphone X, brand new condition. includes charger and box', '2022-02-17 16:48:00', '2027-10-05 16:48:00', 150.000, NULL, NULL, '', 'failed'),
+(24, 21, 'Bed side lamp', 'Bed side Lamp', '2022-02-17 16:50:00', '2028-06-23 16:50:00', 10.000, NULL, NULL, '', 'pending'),
+(25, 21, 'Casio Silver watch', 'Casio silver watch, analog watch', '2022-02-19 16:52:00', '2027-02-17 16:52:00', 20.000, 55.000, 8, '', 'pending'),
+(26, 21, 'iphone X', 'iphone X, brand new condition. includes charger and box', '2022-02-17 16:53:00', '2023-10-17 16:53:00', 150.000, NULL, NULL, '', NULL),
+(28, 1, 'Sofa', '2 seater, wooden sofa. Cushions on sofa in image included', '2022-02-17 17:42:00', '2027-12-17 22:00:00', 30.000, 35.000, 8, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -157,12 +157,12 @@ INSERT INTO `auctions` (`AUCTION_ID`, `OWNER_ID`, `AUCTION_NAME`, `DESCRIPTION`,
 --
 
 CREATE TABLE `messages` (
-  `MESSAGE_ID` int(11) NOT NULL,
-  `AUCTION_ID` int(11) NOT NULL,
+  `MESSAGE_ID` int NOT NULL,
+  `AUCTION_ID` int NOT NULL,
   `MESSAGE` varchar(100) NOT NULL,
-  `USER_ID` int(11) NOT NULL,
+  `USER_ID` int NOT NULL,
   `MESSAGE_TIME` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -171,10 +171,10 @@ CREATE TABLE `messages` (
 --
 
 CREATE TABLE `pictures` (
-  `PICTURE_ID` int(11) NOT NULL,
-  `AUCTION_ID` int(11) NOT NULL,
+  `PICTURE_ID` int NOT NULL,
+  `AUCTION_ID` int NOT NULL,
   `PICTURE` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `pictures`
@@ -211,11 +211,11 @@ INSERT INTO `pictures` (`PICTURE_ID`, `AUCTION_ID`, `PICTURE`) VALUES
 --
 
 CREATE TABLE `questions` (
-  `QUESTION_ID` int(11) NOT NULL,
-  `AUCTION_ID` int(11) NOT NULL,
+  `QUESTION_ID` int NOT NULL,
+  `AUCTION_ID` int NOT NULL,
   `QUESTION` varchar(300) NOT NULL,
   `ANSWER` varchar(300) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `questions`
@@ -226,7 +226,8 @@ INSERT INTO `questions` (`QUESTION_ID`, `AUCTION_ID`, `QUESTION`, `ANSWER`) VALU
 (2, 2, 'ayyy', NULL),
 (3, 2, 'can i use this for self defense \r\n', NULL),
 (4, 18, 'melon good?\r\n', 'yes'),
-(5, 28, 'dwdwdw', NULL);
+(5, 28, 'dwdwdw', 'Sorry, Could you please retype your questions?'),
+(6, 25, 'Is the original box available?', NULL);
 
 -- --------------------------------------------------------
 
@@ -235,20 +236,20 @@ INSERT INTO `questions` (`QUESTION_ID`, `AUCTION_ID`, `QUESTION`, `ANSWER`) VALU
 --
 
 CREATE TABLE `users` (
-  `USER_ID` int(11) NOT NULL,
+  `USER_ID` int NOT NULL,
   `USERNAME` varchar(20) NOT NULL,
   `PASSWORD` varchar(250) NOT NULL,
   `NAME` varchar(50) NOT NULL,
-  `CONTACT_NUM` int(15) NOT NULL,
+  `CONTACT_NUM` int NOT NULL,
   `EMAIL` varchar(40) NOT NULL,
   `COUNTRY` varchar(20) NOT NULL,
   `ADDRESS` varchar(50) NOT NULL,
   `PROFILE_PIC` varchar(100) NOT NULL,
-  `BUYER_RATING_SUM` int(11) DEFAULT NULL,
-  `BUYER_RATING_COUNT` int(11) DEFAULT NULL,
-  `SELLER_RATING_SUM` int(11) DEFAULT NULL,
-  `SELLER_RATING_COUNT` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+  `BUYER_RATING_SUM` int DEFAULT NULL,
+  `BUYER_RATING_COUNT` int DEFAULT NULL,
+  `SELLER_RATING_SUM` int DEFAULT NULL,
+  `SELLER_RATING_COUNT` int DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `users`
@@ -337,37 +338,37 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `ADDRESS_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `ADDRESS_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT for table `auctions`
 --
 ALTER TABLE `auctions`
-  MODIFY `AUCTION_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `AUCTION_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `MESSAGE_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MESSAGE_ID` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pictures`
 --
 ALTER TABLE `pictures`
-  MODIFY `PICTURE_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `PICTURE_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `QUESTION_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `QUESTION_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `USER_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `USER_ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
