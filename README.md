@@ -2,8 +2,8 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)  
-An auction webapp created as part of a course project. It was tested on Apache server and utilises MariaDB. <br>
+![MYSQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)  
+An auction webapp created as part of a course project. It was tested on Apache server and utilises MYSQL. <br>
 <b>Demo website:</b> [http://auctionit.webkraft.space](http://auctionit.webkraft.space/login_form.php) 
 
 ### Website functionalites:  
