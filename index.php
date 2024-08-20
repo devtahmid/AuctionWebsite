@@ -2,7 +2,8 @@
 session_start();
 if (!isset($_SESSION['userId']))
   header('location: login_form.php?error=1');
-header('location: browse.php');
+else
+  header('location: browse.php');
 ?>
 <html>
 <head>
